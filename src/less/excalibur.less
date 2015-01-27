@@ -1,5 +1,207 @@
+/**************************************************
+VARIABLES
+**************************************************/
+
+/** Colours **/
+@brand-primary: #15254d;
+@brand-light: #3761cc;
+@logo: #c0a665;
+@logo-dark: #a88947;
+@pale-background: #d0d7e7;
+
+/** Navbar **/
 @navbar-height: 70px;
+@navbar-default-bg: transparent;
+@navbar-default-border: @brand-light;
+@navbar-border-radius: 0;
+
+/** Carousel **/
+@carousel-control-opacity: 1;
+@carousel-text-shadow: 0 0 0;
+
+/** Panels **/
+@panel-border-radius: 0;
+@panel-default-heading-bg: @pale-background;
+@panel-default-border: @pale-background;
+@panel-inner-border: @pale-background;
+
+/**************************************************
+STYLES
+**************************************************/
+
+/** Scaffolding **/
+html {
+  height: 100%;
+}
+
+body {
+  background: url('../img/starburst.png') no-repeat center bottom @brand-primary fixed;
+  min-height: 100%;
+}
+
+header {
+  background-color: @brand-light;
+  margin-bottom: 20px;
+}
+
+/** Navbar **/
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-header {
+  float: none;
+  @media (min-width: @screen-sm-min) {
+    float: left;
+  }
+}
+
+.navbar-brand {
+  padding: 10px 0;
+  height: 45px;
+  line-height: 45px;
+  @media (min-width: @screen-sm-min) {
+    line-height: 70px;
+    height: 70px;
+  }
+  img {
+    width: 300px;
+    @media (min-width: @screen-sm-min) {
+      width: auto;
+    }
+  }
+}
+
+.navbar-right {
+  height: 40px;
+  float: none;
+  @media (min-width: @screen-sm-min) {
+    float: right;
+  }
+}
+
+.navbar-nav {
+  margin: 0 -15px;
+  > li {
+    margin: 15px 0px 15px 8px;
+    float: left;
+    > a {
+      padding: 0;
+      height: 40px;
+    }
+  }
+}
 
 .ee-social-link {
-  background-image: url('../img/sprite.png');
+  background: url('../img/sprite.png') no-repeat;
+  margin: 0;
+}
+
+#ee-youtube {
+  width: 84px;
+  background-color: white;
+  background-position: 0 -4px;
+  border: 4px solid white;
+  border-radius: 2px;
+}
+
+#ee-facebook {
+  width: 42px;
+  background-position: -82px 0;
+}
+
+#ee-twitter {
+  width: 50px;
+  background-position: -129px 0;
+}
+
+/** Carousel **/
+#ee-highlights {
+  background-color: @logo;
+  padding: 30px;
+  text-align: center;
+  margin: 0 30px;
+  .glyphicon {
+    background-color: @logo-dark;
+    font-size: 26px;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    @media (min-width: @screen-md-min) {
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      line-height: 60px;
+      font-size: 38px;
+    }
+  }
+  .glyphicon-chevron-left {
+    @media (min-width: @screen-sm-min) {
+      margin-left: -72px;
+    }
+    @media (min-width: @screen-md-min) {
+      margin-left: -95px;
+    }
+    @media (min-width: @screen-lg-min) {
+      margin-left: -110px;
+    }
+  }
+  .glyphicon-chevron-right {
+    @media (min-width: @screen-sm-min) {
+      margin-right: -72px;
+    }
+    @media (min-width: @screen-md-min) {
+      margin-right: -95px;
+    }
+    @media (min-width: @screen-lg-min) {
+      margin-right: -110px;
+    }
+  }
+  .carousel-control {
+    display: none;
+    @media (min-width: @screen-sm-min) {
+      display: block;
+    }
+    &:hover, &:focus {
+      opacity: 1;
+      .glyphicon {
+        background-color: darken(@logo-dark, 10%);
+      }
+    }
+  }
+  .carousel-caption {
+    position: static;
+  }
+}
+
+/** Panels **/
+#twitter-widget-0 {
+  margin: 20px auto;
+  display: block;
+  @media (min-width: @screen-md-min) {
+    float: right;
+    margin: 20px 30px 0 0;
+  }
+}
+
+.panel {
+  margin: 20px 0 0 0;
+}
+
+.ee-left-col {
+  margin-left: 30px;
+  margin-right: 30px;
+  @media (min-width: @screen-sm-min) {
+    width: (@container-sm - 90);
+  }
+  @media (min-width: @screen-md-min) {
+    float: left;
+    width: 332px;
+    margin-right: 0;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: 540px;
+  }
+
 }

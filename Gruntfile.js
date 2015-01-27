@@ -44,7 +44,8 @@ module.exports = function(grunt) {
                 expand: true,
                 flatten: true,
                 src: ['lib/bootstrap/js/bootstrap.min.js',
-                        'lib/jquery/jquery.min.js'],
+                        'lib/jquery/jquery.min.js',
+                        'src/js/*.js'],
                 dest: 'dist/js'
             },
             img: {
@@ -52,6 +53,12 @@ module.exports = function(grunt) {
                 flatten: true,
                 src: 'src/img/*.png',
                 dest: 'dist/img'
+            },
+            fonts: {
+                expand: true,
+                flatten: true,
+                src: 'lib/bootstrap/fonts/*',
+                dest: 'dist/fonts'
             }
         },
         htmlbuild: {
@@ -97,5 +104,6 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('default', ['clean', 'bower', 'less', 'cssmin', 'uglify', 'copy', 'htmlbuild']);
+    grunt.registerTask('build', ['clean', 'less', 'cssmin', 'uglify', 'copy', 'htmlbuild']);
 
 };

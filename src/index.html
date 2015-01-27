@@ -8,38 +8,94 @@
     <!-- /build -->
 </head>
 <body>
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapsed" data-target="#ee-social-links">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><img src="img/excalibur-enterprises.png" alt="Excalibur Enterprises" /></a>
+<header>
+    <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="img/excalibur-enterprises.png" alt="Excalibur Enterprises" /></a>
+                </div>
+                <div id="ee-social-links">
+                    <ul class="nav navbar-right navbar-nav">
+                        <li>
+                            <a id="ee-youtube" class="navbar-btn ee-social-link" href="https://www.youtube.com/channel/UCE8wqY-QEmF7D73H0nDL0Fw"><span class="sr-only">Visit Excalibur Brother's YouTube Channel</span></a>
+                        </li>
+                        <li>
+                            <a id="ee-facebook" class="navbar-btn ee-social-link" href="https://www.facebook.com/ExcaliburBrothers"><span class="sr-only">Visit Excalibur Brother's Facebook Page</span></a>
+                        </li>
+                        <li>
+                            <a id="ee-twitter" class="navbar-btn ee-social-link" href="https://twitter.com/ExcaliburBros"><span class="sr-only">Visit Excalibur Brother's Twitter Page</span></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="ee-social-links">
-                <ul class="nav navbar-right navbar-nav">
-                    <li>
-                        <a id="ee-youtube" class="navbar-btn ee-social-link" href="https://www.youtube.com/channel/UCE8wqY-QEmF7D73H0nDL0Fw"><span class="sr-only">Visit Excalibur Brother's YouTube Channel</span></a>
-                    </li>
-                    <li>
-                        <a id="ee-facebook" class="navbar-btn ee-social-link" href="https://www.facebook.com/ExcaliburBrothers"><span class="sr-only">Visit Excalibur Brother's Facebook Page</span></a>
-                    </li>
-                    <li>
-                        <a id="ee-twitter" class="navbar-btn ee-social-link" href="https://twitter.com/ExcaliburBros"><span class="sr-only">Visit Excalibur Brother's Twitter Page</span></a>
-                    </li>
-                </ul>
+        </nav>
+    </div>
+</header>
+<div class="container">
+    <div id="ee-highlights" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#ee-highlights" data-slide-to="0" class="active"></li>
+            <li data-target="#ee-highlights" data-slide-to="1"></li>
+            <li data-target="#ee-highlights" data-slide-to="2"></li>
+            <li data-target="#ee-highlights" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <iframe width="720" height="405" src="http://www.youtube.com/embed/XOXmk3c7n0o?list=UUE8wqY-QEmF7D73H0nDL0Fw" frameborder="0" allowfullscreen></iframe>
+                <div class="carousel-caption">Some placeholder text</div>
+            </div>
+            <div class="item">
+                <iframe width="720" height="405" src="http://www.youtube.com/embed/ksXmF-jzZR8?list=PLB9C8F3596E0EBFF0" frameborder="0" allowfullscreen></iframe>
+                <div class="carousel-caption"></div>
+            </div>
+            <div class="item">
+                <iframe width="720" height="405" src="http://www.youtube.com/embed/4QRsV5LCF7E?list=PL6C7x-f6yLf_vg8GFg02OtpHcntsmmXtr" frameborder="0" allowfullscreen></iframe>
+                <div class="carousel-caption"></div>
+            </div>
+            <div class="item">
+                <iframe width="720" height="405" src="http://www.youtube.com/embed/G0d7C-IZOmU?list=PLF322578BFDD65C96" frameborder="0" allowfullscreen></iframe>
+                <div class="carousel-caption"></div>
             </div>
         </div>
-    </nav>
-    <!-- build:script bundle -->
-    <script src="../lib/jquery/jquery.js"></script>
-    <script src="../lib/bootstrap/js/bootstrap.js"></script>
-    <!-- /build -->
-    <!-- build:remove -->
-    <script src="http://localhost:35729/livereload.js"></script>
-    <!--/build -->
+        <a class="left carousel-control" href="#ee-highlights" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#ee-highlights" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="panel panel-default ee-left-col">
+        <div class="panel-heading">
+            <h2 class="panel-title">About</h2>
+        </div>
+        <div class="panel-body">
+            <p>The Excalibur team has been dedicated to video games and movies since the dawn of history: the 1980s.</p>
+            <p>We labour in the name of Excalibur to bring its glory to all that dare to behold it!</p>
+        </div>
+    </div>
+    <a class="twitter-timeline" href="https://twitter.com/ExcaliburBros" data-widget-id="547851160770863105" min-height="200px" height="600px">Tweets by @ExcaliburBros</a>
+    <div class="panel panel-default ee-left-col">
+        <div class="panel-heading">
+            <h2 class="panel-title">Download Wallpaper</h2>
+        </div>
+        <div class="panel-body">
+
+        </div>
+    </div>
+</div>
+<!-- build:script bundle -->
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<!-- /build -->
+<!-- build:remove -->
+<script src="http://localhost:35729/livereload.js"></script>
+<!--/build -->
+<script src="js/excalibur.js"></script>
+<!-- Twitter feed -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!-- /Twitter feed -->
 </body>
 </html>
