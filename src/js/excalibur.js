@@ -4,6 +4,20 @@ var resizeIframes = function(viewportWidth) {
         carouselContentWidth = 720,
         twitterFeedWidth = 520;
     var resizeCarouselContent = function(newIframeWidth) {
+        var maxHeight = 0;
+        var items = carousel.find(".item");
+        $.each(items, function(index, value) {
+            var $value = $(value);
+            $value.height("auto");
+            if (index === 0) {
+                maxHeight = $value.height();
+            }
+            maxHeight = $value.height() > maxHeight ? $value.height() : maxHeight;
+        });
+        $.each(items, function(index, value) {
+            var $value = $(value);
+            $value.height(maxHeight);
+        });
         $.each(carousel.find("iframe"), function(index, value) {
             var $value = $(value),
                 carouselContentRatio = $value.width() / $value.height();
@@ -21,6 +35,10 @@ var resizeIframes = function(viewportWidth) {
     resizeCarouselContent(carouselContentWidth);
     resizeTwitterFeed(twitterFeedWidth);
 };
+
+$(document).ready(function() {
+    resizeIframes($(window).width());
+});
 
 $(window).resize(function() {
     resizeIframes($(window).width());

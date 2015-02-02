@@ -158,6 +158,17 @@ header {
       margin-right: -110px;
     }
   }
+  .item {
+    text-align: center;
+    > div {
+      display: inline-block;
+      max-width: 720px;
+      .carousel-caption {
+        text-align: left;
+        position: static;
+      }
+    }
+  }
   .carousel-control {
     display: none;
     @media (min-width: @screen-sm-min) {
@@ -169,9 +180,6 @@ header {
         background-color: darken(@logo-dark, 10%);
       }
     }
-  }
-  .carousel-caption {
-    position: static;
   }
 }
 
