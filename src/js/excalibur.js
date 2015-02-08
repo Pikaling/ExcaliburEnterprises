@@ -36,7 +36,7 @@ var resizeIframes = function(viewportWidth) {
     resizeTwitterFeed(twitterFeedWidth);
 };
 
-$(document).ready(function() {
+$(window).load(function() {
     resizeIframes($(window).width());
 });
 

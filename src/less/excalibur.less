@@ -25,6 +25,9 @@ VARIABLES
 @panel-default-border: @pale-background;
 @panel-inner-border: @pale-background;
 
+/** Breakpoints **/
+@screen-xs-min: 600px;
+
 /**************************************************
 STYLES
 **************************************************/
@@ -51,18 +54,20 @@ header {
 
 .navbar-header {
   float: none;
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: @screen-xs-min) {
     float: left;
   }
 }
 
 .navbar-brand {
-  padding: 10px 0;
-  height: 45px;
-  line-height: 45px;
-  @media (min-width: @screen-sm-min) {
-    line-height: 70px;
+  padding: 5px 0;
+  height: auto;
+  @media (min-width: @screen-xs-min) {
     height: 70px;
+    padding: 16px 0;
+  }
+  @media (min-width: @screen-sm-min) {
+    padding: 11px 0;
   }
   img {
     width: 300px;
@@ -75,7 +80,7 @@ header {
 .navbar-right {
   height: 40px;
   float: none;
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: @screen-xs-min) {
     float: right;
   }
 }
@@ -83,8 +88,17 @@ header {
 .navbar-nav {
   margin: 0 -15px;
   > li {
-    margin: 15px 0px 15px 8px;
+    margin: 5px 0px 10px 8px;
+    &:first-child {
+      margin: 5px 0 10px;
+    }
     float: left;
+    @media (min-width: @screen-xs-min) {
+      margin: 15px 0 15px 8px;
+      &:first-child {
+        margin: 15px 0 15px 8px;
+      }
+    }
     > a {
       padding: 0;
       height: 40px;
@@ -120,7 +134,10 @@ header {
   background-color: @logo;
   padding: 30px;
   text-align: center;
-  margin: 0 30px;
+  margin: 0px;
+  @media (min-width: @screen-sm-min) {
+    margin: 0 30px;
+  }
   .glyphicon {
     background-color: @logo-dark;
     font-size: 26px;
@@ -185,8 +202,11 @@ header {
 
 /** Panels **/
 #twitter-widget-0 {
-  margin: 20px auto;
+  margin: 20px 0;
   display: block;
+  @media (min-width: @screen-sm-min) {
+    margin: 20px auto;
+  }
   @media (min-width: @screen-md-min) {
     float: right;
     margin: 20px 30px 0 0;
@@ -198,10 +218,9 @@ header {
 }
 
 .ee-left-col {
-  margin-left: 30px;
-  margin-right: 30px;
   @media (min-width: @screen-sm-min) {
     width: (@container-sm - 90);
+    margin: 0 30px;
   }
   @media (min-width: @screen-md-min) {
     float: left;
@@ -237,10 +256,12 @@ header {
     .panel-body {
       display: block;
     }
+
     img {
       float: left;
       margin-bottom: 0;
     }
+
     ul {
       float: left;
       margin-left: 20px;
@@ -252,6 +273,7 @@ header {
       float: none;
       margin-bottom: 20px;
     }
+
     ul {
       float: none;
       margin-left: 0;
@@ -263,6 +285,7 @@ header {
       float: left;
       margin-bottom: 0;
     }
+
     ul {
       float: left;
       margin-left: 20px;

@@ -51,7 +51,7 @@ module.exports = function(grunt) {
             img: {
                 expand: true,
                 flatten: true,
-                src: 'src/img/*.png',
+                src: ['src/img/*.png', 'src/img/*.jpg'],
                 dest: 'dist/img'
             },
             fonts: {
@@ -59,6 +59,12 @@ module.exports = function(grunt) {
                 flatten: true,
                 src: 'lib/bootstrap/fonts/*',
                 dest: 'dist/fonts'
+            },
+            favicons: {
+                expand: true,
+                flatten: true,
+                src: 'src/favicons/*',
+                dest: 'dist/'
             }
         },
         htmlbuild: {
@@ -69,12 +75,13 @@ module.exports = function(grunt) {
                     beautify: true,
                     scripts: {
                         bundle: [
-                            'dist/js/*.min.js'
+                            'dist/js/jquery.min.js',
+                            'dist/js/bootstrap.min.js'
                         ]
                     },
                     styles: {
                         bundle: [
-                            'dist/css/*.min.css'
+                            'dist/css/style.min.css'
                         ]
                     }
                 }
