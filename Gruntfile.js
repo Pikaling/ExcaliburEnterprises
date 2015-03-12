@@ -30,13 +30,7 @@ module.exports = function(grunt) {
         },
         uglify: {
             my_target: {
-                files: [{
-                    expand: true,
-                    cwd: 'src',
-                    src: '**/*.js',
-                    dest: 'dist/js',
-                    ext: '.min.js'
-                }]
+                files: {'dist/js/excalibur.min.js': 'src/js/excalibur.js'}
             }
         },
         copy: {
@@ -44,8 +38,7 @@ module.exports = function(grunt) {
                 expand: true,
                 flatten: true,
                 src: ['lib/bootstrap/js/bootstrap.min.js',
-                        'lib/jquery/jquery.min.js',
-                        'src/js/*.js'],
+                        'lib/jquery/jquery.min.*'],
                 dest: 'dist/js'
             },
             img: {
@@ -76,7 +69,8 @@ module.exports = function(grunt) {
                     scripts: {
                         bundle: [
                             'dist/js/jquery.min.js',
-                            'dist/js/bootstrap.min.js'
+                            'dist/js/bootstrap.min.js',
+                            'dist/js/excalibur.min.js'
                         ]
                     },
                     styles: {

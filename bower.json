@@ -23,7 +23,7 @@
       "fonts": "fonts/*.*"
     },
     "jquery": {
-      "": "dist/jquery*.js"
+      "": "dist/jquery.**.*"
     }
   }
 }
